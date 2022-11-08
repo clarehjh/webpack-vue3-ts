@@ -61,7 +61,7 @@ const config: webpack.Configuration = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [require("autoprefixer")],
+                plugins: [require("postcss-preset-env")],
               },
             },
           },
@@ -78,6 +78,8 @@ const config: webpack.Configuration = {
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
   ],
+
+  
 };
 
 export default config;
